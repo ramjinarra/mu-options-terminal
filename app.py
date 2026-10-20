@@ -231,7 +231,7 @@ def fetch_alpaca_live_options_and_gex(symbol: str, curr_price: float, t1_price: 
     if debit_to_width_pct <= 45.0:
         verdict = f"✅ #1 BEST OPTION: {spread_label.upper()} (${actual_long_k:g}/${actual_short_k:g} at${spread_mid_debit:.2f} = {debit_to_width_pct:.1f}% of Width — Ideal Entry Price!)"
     else:
-        verdict = f"🟢 #1 BEST OPTION: {spread_label.upper()} (${actual_long_k:g}/${actual_short_k:g} — Work Limit Order Near ${width * 0.43:.2f} \vert{} Current Mid:${spread_mid_debit:.2f})"
+verdict = f"🟢 #1 BEST OPTION: {spread_label.upper()} (${actual_long_k:g}/${actual_short_k:g} — Work Limit Order Near ${width * 0.43:.2f} | Current Mid: ${spread_mid_debit:.2f})"
 
     return {
         "neutral_only": False,
